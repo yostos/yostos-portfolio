@@ -9,7 +9,7 @@ export default function Header() {
         <div className="flex items-center">
           <Link href="/" className="text-xl font-medium flex items-center">
             <span className="mr-2">💀</span>
-            Toshiyuki Yoshida
+            Inagales.com
           </Link>
         </div>
         <nav>
