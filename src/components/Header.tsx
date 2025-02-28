@@ -31,17 +31,14 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link
-                href="/posts"
-                className="hover:opacity-80 transition-colors"
-              >
+              <span className="text-neutral-content/40 cursor-not-allowed">
                 Posts
-              </Link>
+              </span>
             </li>
             <li>
-              <Link href="/uses" className="hover:opacity-80 transition-colors">
-                Uses
-              </Link>
+              <span className="text-neutral-content/40 cursor-not-allowed">
+                Contact
+              </span>
             </li>
             <li>
               <Link

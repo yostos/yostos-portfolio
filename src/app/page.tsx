@@ -6,12 +6,17 @@ import {
   faPenRuler,
   faCode,
 } from "@fortawesome/free-solid-svg-icons";
+import Cube3D from "../components/Cube3D";
 
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-base-100 px-4">
+      {/* 3Dキューブセクション */}
+      <div className="w-full max-w-4xl mx-auto py-8">
+        <Cube3D />
+      </div>
       <div className="text-center max-w-2xl">
-        <h1 className="text-5xl font-bold mb-4">Toshiyuki Yoshida</h1>
+        <h1 className="text-5xl font-bold mb-4">Inagales.com</h1>
         <p className="text-xl mb-8">
           Digital Craftsman ( Artist / Developer / Designer )
         </p>
