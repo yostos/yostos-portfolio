@@ -45,7 +45,7 @@ export default function Header() {
             </li>
             <li>
               <Link
-                href="https://github.com/yourusername"
+                href="https://github.com/yostos/yostos-portfolio"
                 className="hover:opacity-80 transition-colors flex items-center"
               >
                 <svg
