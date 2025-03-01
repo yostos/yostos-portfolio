@@ -112,10 +112,14 @@ export default function About() {
               <motion.div
                 key={index}
                 variants={itemVariants}
-                className="border-l-4 border-primary pl-4 py-2 bg-gray-100 shadow-md rounded-lg transform scale-95 hover:scale-100 transition-all duration-700"
+                className="border-l-4 border-primary pl-4 py-2 bg-gray-100 dark:bg-gray-800 shadow-md rounded-lg transform scale-95 hover:scale-100 transition-all duration-700"
               >
-                <h2 className="text-xl font-bold mb-2">{principle.title}</h2>
-                <p>{principle.text}</p>
+                <h2 className="text-xl font-bold mb-2 text-gray-900 dark:text-white">
+                  {principle.title}
+                </h2>
+                <p className="text-gray-800 dark:text-gray-200">
+                  {principle.text}
+                </p>
               </motion.div>
             ))}
           </motion.div>
