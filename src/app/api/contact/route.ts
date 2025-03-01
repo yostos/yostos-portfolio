@@ -1,33 +1,14 @@
 import { SESClient, SendEmailCommand } from "@aws-sdk/client-ses";
 import { NextRequest, NextResponse } from "next/server";
 import { SendEmailCommandInput } from "@aws-sdk/client-ses";
-import { Amplify } from "aws-amplify";
-
-// AWS Secrets Managerからの認証情報取得関数
-async function getAwsCredentials() {
-  try {
-    const credentials = await Amplify.Secret.get("aws-credentials");
-    console.log("Credentials retrieved succressfully");
-
-    return {
-      accessKeyId: credentials.AWS_ACCESS_KEY_ID,
-      secretAccessKey: credentials.AWS_SECRET_ACCESS_KEY,
-    };
-  } catch (error) {
-    console.error("Amplify Secretから認証情報取得エラー:", error);
-    throw error;
-  }
-}
 
 // AWS SES クライアントの非同期初期化関数
 async function createSesClient() {
-  const credentials = await getAwsCredentials();
-
   return new SESClient({
     region: process.env.SES_REGION || "ap-northeast-1",
     credentials: {
-      accessKeyId: credentials.accessKeyId,
-      secretAccessKey: credentials.secretAccessKey,
+      accessKeyId: process.env.AWS_ACCESS_KEY_ID!,
+      secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY!,
     },
   });
 }
