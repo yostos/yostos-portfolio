@@ -12,6 +12,15 @@ const sesClient = new SESClient({
 });
 
 export async function POST(request: NextRequest) {
+  console.log(
+    "AWS_ACCESS_KEY_ID:",
+    process.env.AWS_ACCESS_KEY_ID ? "✅ OK" : "❌ MISSING",
+  );
+  console.log(
+    "AWS_SECRET_ACCESS_KEY:",
+    process.env.AWS_SECRET_ACCESS_KEY ? "✅ OK" : "❌ MISSING",
+  );
+
   try {
     const data = await request.json();
     const { name, email, subject, message } = data;
