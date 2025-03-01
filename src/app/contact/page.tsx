@@ -259,10 +259,7 @@ export default function Contact() {
         </div>
 
         <div className="text-center text-sm text-neutral-content/50">
-          <p>
-            ※
-            現在このフォームはデモンストレーション用です。実際の送信は行われません。
-          </p>
+          <p>※ フォームについては実際にメールが送信されます。</p>
         </div>
       </div>
     </main>

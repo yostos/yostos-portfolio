@@ -14,9 +14,9 @@ export default function Footer() {
     <footer className="bg-black text-white py-8">
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center justify-center text-center">
-          <p className="mb-2">© 2025 Inagales - Toshiyuki Yoshida</p>
+          <p className="mb-2">© 2025 Inagales.com - Toshiyuki Yoshida</p>
           <div className="flex items-center text-sm flex-wrap justify-center gap-1 mb-2">
-            <span>Inagales by Toshiyuki Yoshida is licensed under</span>
+            <span>Inagales.com by Toshiyuki Yoshida is licensed under</span>
             <Link
               href="https://creativecommons.org/licenses/by-nc-nd/4.0/"
               target="_blank"
