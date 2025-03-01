@@ -38,20 +38,19 @@ async function getAwsCredentials() {
 // AWS SES クライアントの非同期初期化関数
 async function createSesClient() {
   const credentials = await getAwsCredentials();
-  
+
   return new SESClient({
     region: process.env.SES_REGION || "ap-northeast-1",
     credentials: {
       accessKeyId: credentials.accessKeyId,
-      secretAccessKey: credentials.secretAccessKey
-    }
+      secretAccessKey: credentials.secretAccessKey,
+    },
   });
 }
 
 export async function POST(request: NextRequest) {
-
   let sesClient: SESClient;
-  
+
   try {
     // SESクライアントを動的に作成
     sesClient = await createSesClient();
@@ -59,9 +58,9 @@ export async function POST(request: NextRequest) {
     console.error("SESクライアント作成エラー:", clientError);
     return NextResponse.json(
       { error: "AWS認証情報の取得に失敗しました" },
-      { status: 500 }
+      { status: 500 },
     );
-
+  }
   try {
     const data = await request.json();
     const { name, email, subject, message } = data;
