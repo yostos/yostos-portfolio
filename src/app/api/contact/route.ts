@@ -1,36 +1,20 @@
 import { SESClient, SendEmailCommand } from "@aws-sdk/client-ses";
-import {
-  SecretsManagerClient,
-  GetSecretValueCommand,
-} from "@aws-sdk/client-secrets-manager";
 import { NextRequest, NextResponse } from "next/server";
 import { SendEmailCommandInput } from "@aws-sdk/client-ses";
+import { Amplify } from "aws-amplify";
 
 // AWS Secrets Managerからの認証情報取得関数
 async function getAwsCredentials() {
-  const secretsManagerClient = new SecretsManagerClient({
-    region: process.env.SES_REGION || "ap-northeast-1",
-  });
-
   try {
-    const command = new GetSecretValueCommand({
-      SecretId:
-        process.env.AWS_CREDENTIALS_SECRET_NAME || "aws-ses-credentials",
-    });
+    const credentials = await Amplify.Secret.get("aws-credentials");
+    console.log("Credentials retrieved succressfully");
 
-    const response = await secretsManagerClient.send(command);
-
-    if (response.SecretString) {
-      const secret = JSON.parse(response.SecretString);
-      return {
-        accessKeyId: secret.AWS_ACCESS_KEY_ID,
-        secretAccessKey: secret.AWS_SECRET_ACCESS_KEY,
-      };
-    }
-
-    throw new Error("認証情報の取得に失敗しました");
+    return {
+      accessKeyId: credentials.AWS_ACCESS_KEY_ID,
+      secretAccessKey: credentials.AWS_SECRET_ACCESS_KEY,
+    };
   } catch (error) {
-    console.error("シークレット取得エラー:", error);
+    console.error("Amplify Secretから認証情報取得エラー:", error);
     throw error;
   }
 }
