@@ -2,12 +2,26 @@ import { SESClient, SendEmailCommand } from "@aws-sdk/client-ses";
 import { NextRequest, NextResponse } from "next/server";
 import { SendEmailCommandInput } from "@aws-sdk/client-ses";
 import { defaultProvider } from "@aws-sdk/credential-provider-node"; // IAMロールから認証情報を取得
-
+import { STSClient, GetCallerIdentityCommand } from "@aws-sdk/client-sts";
 // AWS SES設定
 const sesClient = new SESClient({
   region: process.env.SES_REGION || "ap-northeast-1",
   credentials: defaultProvider(), // IAM ロールを使用して認証
 });
+
+const checkIamRole = async () => {
+  try {
+    const stsClient = new STSClient({});
+    const command = new GetCallerIdentityCommand({});
+    const data = await stsClient.send(command);
+    console.log("✅ IAM Role ARN:", data.Arn);
+  } catch (error) {
+    console.error("❌ STS Error: IAM ロールの認証情報が取得できません", error);
+  }
+};
+
+// IAM ロールの認証チェック（テスト用）
+checkIamRole();
 
 export async function POST(request: NextRequest) {
   try {
