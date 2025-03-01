@@ -15,10 +15,8 @@ export default function Footer() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col items-center justify-center text-center">
           <p className="mb-2">© 2025 Inagales - Toshiyuki Yoshida</p>
-          <div className="flex items-center space-x-2">
-            <span>
-              Inagales(Portfolio Site) by Toshiyuki Yoshida is licensed under
-            </span>
+          <div className="flex items-center text-sm flex-wrap justify-center gap-1 mb-2">
+            <span>Inagales by Toshiyuki Yoshida is licensed under</span>
             <Link
               href="https://creativecommons.org/licenses/by-nc-nd/4.0/"
               target="_blank"
@@ -30,7 +28,15 @@ export default function Footer() {
               <FontAwesomeIcon icon={faCreativeCommonsNd} className="mx-1" />
               <span className="ml-1">CC BY-NC-ND 4.0</span>
             </Link>
+            <span>(Contents),</span>
+            <Link href="/lisence#source-code" className="hover:underline ml-1">
+              MIT lisence
+            </Link>
+            <span>(Source)</span>
           </div>
+          <Link href="/license" className="text-sm hover:underline">
+            ライセンス情報
+          </Link>
         </div>
       </div>
     </footer>

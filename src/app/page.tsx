@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCompass,
@@ -17,27 +18,34 @@ export default function Home() {
       </div>
       <div className="text-center max-w-2xl">
         <h1 className="text-5xl font-bold mb-4">Inagales.com</h1>
-        <p className="text-xl mb-8">
-          Digital Craftsman ( Artist / Developer / Designer )
+        <p className="text-lg mb-2 text-neutral-400">
+          Digital Craftsman ( Architect / Developer / Designer )
         </p>
 
         <div className="my-6 py-3 border-y border-neutral-content/10">
-          <p className="text-lg font-medium mb-1 text-neutral-content/70">
+          <p className="text-xl font-medium mb-1 text-neutral-content/70">
             Design the Era. Code with Vera.
           </p>
           <p className="text-sm text-neutral-content/50">
             時代をデザインし、真実をコードする
           </p>
         </div>
-
-        <button className="btn btn-primary">View My Work</button>
+        <div className="text-xs text-neutral-content/40 mt-8 max-w-lg mx-auto">
+          <p>
+            ※ 人生で最も無駄な時間を少しでも有意義にするため、
+            <br />
+            Web技術とデザイン手法の検証を目的として
+            片手間で作った練習用ポートフォリオです。
+          </p>
+        </div>
       </div>
       {/* サービスセクション */}
       <div className="w-full bg-neutral-100 dark:bg-neutral-800 py-16 px-4">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-4xl font-bold text-center mb-4">Service</h2>
           <p className="text-center mb-12">
-            理念の則り、次のようなサービスを提供いたします。
+            <Link href="/about">理念</Link>
+            の則り、次のようなサービスを提供いたします。
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">

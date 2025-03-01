@@ -36,9 +36,12 @@ export default function Header() {
               </span>
             </li>
             <li>
-              <span className="text-neutral-content/40 cursor-not-allowed">
+              <Link
+                href="/contact"
+                className="hover:opacity-80 transition-colors"
+              >
                 Contact
-              </span>
+              </Link>
             </li>
             <li>
               <Link
