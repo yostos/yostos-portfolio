@@ -106,7 +106,7 @@ export default function Contact() {
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="input input-bordered bg-slate-50 shadow-sm border  focus:border-primary focus:ring-2 focus:ring-primary/20 w-full"
+                    className="input input-bordered bg-slate-50 dark:bg-slate-700 shadow-sm border  focus:border-primary focus:ring-2 focus:ring-primary/20 w-full"
                     required
                   />
                 </div>
