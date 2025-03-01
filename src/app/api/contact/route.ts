@@ -1,25 +1,66 @@
 import { SESClient, SendEmailCommand } from "@aws-sdk/client-ses";
+import {
+  SecretsManagerClient,
+  GetSecretValueCommand,
+} from "@aws-sdk/client-secrets-manager";
 import { NextRequest, NextResponse } from "next/server";
 import { SendEmailCommandInput } from "@aws-sdk/client-ses";
 
-// AWS SES設定 - 認証情報を指定せずデフォルトチェーンに依存
-const sesClient = new SESClient({
-  region: process.env.SES_REGION || "ap-northeast-1",
-  credentials: {
-    accessKeyId: process.env.AWS_ACCESS_KEY_ID!,
-    secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY!,
-  },
-});
+// AWS Secrets Managerからの認証情報取得関数
+async function getAwsCredentials() {
+  const secretsManagerClient = new SecretsManagerClient({
+    region: process.env.SES_REGION || "ap-northeast-1",
+  });
+
+  try {
+    const command = new GetSecretValueCommand({
+      SecretId:
+        process.env.AWS_CREDENTIALS_SECRET_NAME || "aws-ses-credentials",
+    });
+
+    const response = await secretsManagerClient.send(command);
+
+    if (response.SecretString) {
+      const secret = JSON.parse(response.SecretString);
+      return {
+        accessKeyId: secret.AWS_ACCESS_KEY_ID,
+        secretAccessKey: secret.AWS_SECRET_ACCESS_KEY,
+      };
+    }
+
+    throw new Error("認証情報の取得に失敗しました");
+  } catch (error) {
+    console.error("シークレット取得エラー:", error);
+    throw error;
+  }
+}
+
+// AWS SES クライアントの非同期初期化関数
+async function createSesClient() {
+  const credentials = await getAwsCredentials();
+  
+  return new SESClient({
+    region: process.env.SES_REGION || "ap-northeast-1",
+    credentials: {
+      accessKeyId: credentials.accessKeyId,
+      secretAccessKey: credentials.secretAccessKey
+    }
+  });
+}
 
 export async function POST(request: NextRequest) {
-  console.log(
-    "AWS_ACCESS_KEY_ID:",
-    process.env.AWS_ACCESS_KEY_ID ? "✅ OK" : "❌ MISSING",
-  );
-  console.log(
-    "AWS_SECRET_ACCESS_KEY:",
-    process.env.AWS_SECRET_ACCESS_KEY ? "✅ OK" : "❌ MISSING",
-  );
+
+  let sesClient: SESClient;
+  
+  try {
+    // SESクライアントを動的に作成
+    sesClient = await createSesClient();
+  } catch (clientError) {
+    console.error("SESクライアント作成エラー:", clientError);
+    return NextResponse.json(
+      { error: "AWS認証情報の取得に失敗しました" },
+      { status: 500 }
+    );
 
   try {
     const data = await request.json();
