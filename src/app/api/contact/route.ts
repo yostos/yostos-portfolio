@@ -1,11 +1,12 @@
 import { SESClient, SendEmailCommand } from "@aws-sdk/client-ses";
 import { NextRequest, NextResponse } from "next/server";
 import { SendEmailCommandInput } from "@aws-sdk/client-ses";
+import { defaultProvider } from "@aws-sdk/credential-provider-node"; // IAMロールから認証情報を取得
 
 // AWS SES設定
 const sesClient = new SESClient({
   region: process.env.SES_REGION || "ap-northeast-1",
-  // 認証情報は指定しない - Amplifyの環境から自動的に取得される
+  credentials: defaultProvider(), // IAM ロールを使用して認証
 });
 
 export async function POST(request: NextRequest) {
