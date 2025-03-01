@@ -161,7 +161,7 @@ export default function Contact() {
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    className="textarea textarea-bordered bg-slate-50 shadow-sm h-60 border  focus:border-primary focus:ring-2 focus:ring-primary/20 w-full"
+                    className="textarea textarea-bordered bg-slate-50 dark:bg-slate-800 shadow-sm h-60 border  focus:border-primary focus:ring-2 focus:ring-primary/20 w-full"
                     required
                   ></textarea>
                 </div>
@@ -174,7 +174,7 @@ export default function Contact() {
                 <div className="flex justify-end mb-4">
                   <button
                     type="submit"
-                    className="btn btn-primary btn-lg shadow-md px-8 py-2 bg-gray-200 hover:shadow-lg trannform hover:-translate-y-1 transition-all duration-200"
+                    className="btn btn-primary btn-lg shadow-md px-8 py-2 bg-gray-200 dark:bg-gray-600  hover:shadow-lg trannform hover:-translate-y-1 transition-all duration-200"
                     disabled={isSubmitting}
                   >
                     {isSubmitting ? (
