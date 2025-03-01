@@ -1,5 +1,6 @@
 import { SESClient, SendEmailCommand } from "@aws-sdk/client-ses";
 import { NextRequest, NextResponse } from "next/server";
+import { SendEmailCommandInput } from "@aws-sdk/client-ses";
 
 // AWS SES設定
 const sesClient = new SESClient({
@@ -21,10 +22,10 @@ export async function POST(request: NextRequest) {
     }
 
     // メール送信パラメータ
-    const params = {
-      Source: process.env.SES_FROM_EMAIL,
+    const params: SendEmailCommandInput = {
+      Source: process.env.SES_FROM_EMAIL ?? "", //空文字をデフォルトに
       Destination: {
-        ToAddresses: [process.env.SES_TO_EMAIL],
+        ToAddresses: [process.env.SES_TO_EMAIL ?? ""],
       },
       ReplyToAddresses: [email],
       Message: {
