@@ -38,7 +38,7 @@ export default function Home() {
           <p>
             <FontAwesomeIcon
               icon={faComment}
-              className="text-base text-neutral-700 dark:text0neutral-200 mr-2"
+              className="text-base text-neutral-700 dark:text-neutral-200 mr-2"
             />
             人生で最も無駄な時間を少しでも有意義にするため、
             Web技術とデザイン手法の検証を目的として
