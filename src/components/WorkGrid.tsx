@@ -22,7 +22,13 @@ export default function WorkGrid({ limit }: WorkGridProps) {
       id: "portfolio",
       title: "Inagales.com",
       description:
-        "本サイトです。Next.js + Tailwind CSS + daisyUIでデザインし、Amazon Amplify上で稼働しAmazon SESを利用した問い合わせフォームを実装しています。",
+        "当サイトは最新のWeb技術スタックを駆使して構築されています。\
+         フロントエンドにはNext.jsとTailwind CSSをベースに、\
+         daisyUIコンポーネントライブラリを組み合わせることで、\
+         モダンでレスポンシブなデザインを実現しています。\
+         インフラストラクチャとしてAWS(Amazon Amplify)を採用し、\
+         スケーラブルかつ高速なパフォーマンスを確保。\
+         さらに、Amazon SESを統合した安全で信頼性の高い問い合わせフォームを実装しています。",
       imageUrl: "/images/works/portfolio.webp",
       link: "https://portfolio.inagales.com",
     },
@@ -30,7 +36,9 @@ export default function WorkGrid({ limit }: WorkGridProps) {
       id: "new-year",
       title: "New Year Greeting Site",
       description:
-        "このサイトはJavascriptで動的な動きを取り込んだサイト例です。使用している楽曲、グラフィックの制作も行っています。",
+        "このサイトはJavascriptで動的な動きを取り込んだサイト例です。\
+         特殊なフォントと効果の組み合わせで、80年代風のレトロなゲーム画面を意識したデザインとしています。\
+         また、使用している楽曲、グラフィックの制作も行っています。",
       imageUrl: "/images/works/new-year.webp",
       link: "https://www.inagales.com/new-years-greetings/",
     },
@@ -38,7 +46,10 @@ export default function WorkGrid({ limit }: WorkGridProps) {
       id: "blog-site",
       title: "Blog Site",
       description:
-        "静的サイトジェネレータ Hugoを使ったブログサイトのデザイン例です。Movable Type/WordPressなどのCMSのデザインも対応可能です。",
+        "静的サイトジェネレータ Hugoを使った個人ブログサイトのデザイン例です。\
+         同じ記事についてトップ画面ではサマリー、アーカイブではタイトルのみなど\
+         来訪者に読みやすいサイトを心がけています。\
+         多くの企業で使用されているMovable Type/WordPressなどのCMSのデザインも対応いたします。",
       imageUrl: "/images/works/blog-site.webp",
       link: "https://www.inagales.com/blog/",
     },
