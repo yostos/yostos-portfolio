@@ -33,6 +33,13 @@ export default function WorkGrid({ limit }: WorkGridProps) {
       link: "https://portfolio.inagales.com",
     },
     {
+      id: "music",
+      title: "Music Works",
+      description: "音楽関連の作品です。",
+      imageUrl: "/images/works/music.webp",
+      link: "/works/music",
+    },
+    {
       id: "new-year",
       title: "New Year Greeting Site",
       description:
@@ -54,7 +61,7 @@ export default function WorkGrid({ limit }: WorkGridProps) {
       link: "https://www.inagales.com/blog/",
     },
     {
-      id: "project-4",
+      id: "project-5",
       title: "Project Title",
       description: "プロジェクトの詳細説明文をここに入れます。",
       imageUrl: "/images/works/placeholder.webp",
