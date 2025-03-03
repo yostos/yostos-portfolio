@@ -40,8 +40,8 @@ export default function Home() {
               icon={faComment}
               className="text-base text-neutral-700 dark:text-neutral-200 mr-2"
             />
-            人生で最も無駄な時間を少しでも有意義にするため、
-            Web技術とデザイン手法の検証を目的として
+            まともにデザインを教えてもらえないので、
+            個人でWeb技術とデザイン手法の検証を目的として
             片手間で作った練習用ポートフォリオです。
           </p>
           <p>
