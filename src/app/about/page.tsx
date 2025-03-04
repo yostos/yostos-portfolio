@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import Cube3D from "../../components/Cube3D";
+import Cube3D from "@/components/Cube3D";
 
 export default function About() {
   const [isOpen, setIsOpen] = useState(false);
@@ -88,7 +88,10 @@ export default function About() {
         {/* ヒーローセクション */}
         <div className="max-w-6xl mx-auto py-16 flex items-center space-x-6">
           <div className="w-3/4 h-3/4">
-            <Cube3D />
+            <Cube3D
+              text="Inagales.com"
+              subtitle="Digital Craftsman ( Architect / Developer / Designer )"
+            />
           </div>
           <div className="w-1/2">
             <h1 className="text-4xl font-bold mb-4">

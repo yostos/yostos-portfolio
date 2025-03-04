@@ -23,19 +23,19 @@ export default function WorkGrid({ limit }: WorkGridProps) {
       title: "Inagales.com",
       description:
         "当サイトは最新のWeb技術スタックを駆使して構築されています。\
-         フロントエンドにはNext.jsとTailwind CSSをベースに、\
-         daisyUIコンポーネントライブラリを組み合わせることで、\
+         Next.js/Tailwind CSS/、\
+         daisyUI/Threeを組み合わせることで、\
          モダンでレスポンシブなデザインを実現しています。\
-         インフラストラクチャとしてAWS(Amazon Amplify)を採用し、\
-         スケーラブルかつ高速なパフォーマンスを確保。\
-         さらに、Amazon SESを統合した安全で信頼性の高い問い合わせフォームを実装しています。",
+         スケーラブルかつ高速な。Amazon Amplify(AWS)を採用し、\
+         Amazon SESを統合した信頼性の高いフォームを実装しています。",
       imageUrl: "/images/works/portfolio.webp",
       link: "https://portfolio.inagales.com",
     },
     {
       id: "music",
       title: "Music Works",
-      description: "音楽関連の作品です。",
+      description:
+        "ギター演奏と打ち込みを駆使し、幅広い音楽を制作。ビートルズ、80年代Fusion/Rockからアニメ劇中歌まで、多彩なジャンルに対応可能です。",
       imageUrl: "/images/works/music.webp",
       link: "/works/music",
     },
