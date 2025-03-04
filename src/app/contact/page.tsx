@@ -72,9 +72,13 @@ export default function Contact() {
       <div className="container mx-auto px-4 max-w-4xl">
         <h1 className="text-4xl font-bold text-center mb-6">Contact</h1>
 
-        <p className="text-center mb-12 max-w-2xl mx-auto">
+        <p lang="ja" className="text-center mb-2 max-w-2xl mx-auto">
           お問い合わせ、プロジェクトのご相談、またはただの挨拶でも、お気軽にご連絡ください。
           できるだけ早くご返信いたします。
+        </p>
+        <p lang="en" className="text-center mb-6 max-w-2xl mx-auto">
+          Feel free to reach out for inquiries, project discussions, or even
+          just to say hello. I will get back to you as soon as possible.
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-16">
@@ -96,8 +100,17 @@ export default function Contact() {
               >
                 <div className="form-control mb-6">
                   <label className="label mb-8" htmlFor="name">
-                    <span className="label-text font-medium text-base">
+                    <span
+                      lang="ja"
+                      className="label-text font-medium text-base"
+                    >
                       お名前
+                    </span>
+                    <span
+                      lang="en"
+                      className="label-text font-medium text-base"
+                    >
+                      (Name)
                     </span>
                   </label>
                   <input
@@ -113,8 +126,17 @@ export default function Contact() {
 
                 <div className="form-control mb-6">
                   <label className="label mb-8" htmlFor="email">
-                    <span className="label-text font-medium text-base">
+                    <span
+                      lang="ja"
+                      className="label-text font-medium text-base"
+                    >
                       メールアドレス
+                    </span>
+                    <span
+                      lang="en"
+                      className="label-text font-medium text-base"
+                    >
+                      (Email Address)
                     </span>
                   </label>
                   <input
@@ -130,8 +152,17 @@ export default function Contact() {
 
                 <div className="form-control mb-6">
                   <label className="label mb-8" htmlFor="subject">
-                    <span className="label-text font-medium text-base">
+                    <span
+                      lang="ja"
+                      className="label-text font-medium text-base"
+                    >
                       お問い合わせ件名
+                    </span>
+                    <span
+                      lang="en"
+                      className="label-text font-medium text-base"
+                    >
+                      (Inquirey Subject)
                     </span>
                   </label>
                   <select
@@ -152,8 +183,17 @@ export default function Contact() {
 
                 <div className="form-control mb-8 flex-row items-center">
                   <label className="label" htmlFor="message">
-                    <span className="label-text font-medium text-base">
+                    <span
+                      lang="ja"
+                      className="label-text font-medium text-base"
+                    >
                       メッセージ
+                    </span>
+                    <span
+                      lang="en"
+                      className="label-text font-medium text-base"
+                    >
+                      (Message)
                     </span>
                   </label>
                   <textarea
@@ -182,7 +222,7 @@ export default function Contact() {
                     ) : (
                       <div>
                         <FontAwesomeIcon icon={faPaperPlane} className="mr-4" />
-                        送信
+                        Submit
                       </div>
                     )}
                   </button>
@@ -195,7 +235,7 @@ export default function Contact() {
             <div className="card bg-base-200 shadow-md p-6 mb-6 border border-base-300">
               <h3 className="text-xl font-bold mb-4">お問い合わせについて</h3>
 
-              <p className="mb-4">
+              <p lang="ja" className="mb-4">
                 このフォームからお問い合わせいただくと、直接 メール &nbsp;
                 <FontAwesomeIcon
                   icon={faEnvelope}
@@ -203,10 +243,18 @@ export default function Contact() {
                 />
                 にてご連絡いたします。
               </p>
+              <p lang="en" className="mb-4">
+                When you contact us through this form, we will respond directly
+                via email &nbsp;
+                <FontAwesomeIcon
+                  icon={faEnvelope}
+                  className="text-xl mr-3 text-primary"
+                />
+                .
+              </p>
             </div>
             <div className="card bg-base-200 shadow-md p-6 border border-base-300">
-              <h3 className="text-xl font-bold mb-4">ソーシャルメディア</h3>
-              <p className="mb-4">ソーシャルメディアの</p>
+              <h3 className="text-xl font-bold mb-4">Social Media</h3>
               <div className="flex flex-col space-y-4">
                 <a
                   href="https://github.com/yostos"
@@ -260,6 +308,7 @@ export default function Contact() {
 
         <div className="text-center text-sm text-neutral-content/50">
           <p>※ フォームについては実際にメールが送信されます。</p>
+          <p lang="en">*The form will actually send an email.</p>
         </div>
       </div>
     </main>

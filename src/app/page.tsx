@@ -72,15 +72,27 @@ export default function Home() {
       <section className="w-full bg-neutral-100 dark:bg-neutral-800 py-4 px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-2">Service</h2>
-          <p className="text-center mb-8">
-            <Link
-              className="inline-block px-2 py-0.5 bg-neutral-200 dark:bg-neutral-700 rounded hover:bg-neutral-300 dark:hover:bg-neutral-600"
-              href="/about"
-            >
-              理念
-            </Link>
-            の則り、次のようなサービスを提供いたします。
-          </p>
+          <div className="text-center mb-8">
+            <p lang="ja">
+              <Link
+                className="inline-block px-2 py-0.5 bg-neutral-200 dark:bg-neutral-700 rounded hover:bg-neutral-300 dark:hover:bg-neutral-600"
+                href="/about"
+              >
+                理念
+              </Link>
+              の則り、次のようなサービスを提供いたします。
+            </p>
+            <p lang="en">
+              In accordance with border-neutral-content
+              <Link
+                className="inline-block px-2 py-0.5 bg-neutral-200 dark:bg-neutral-700 rounded hover:bg-neutral-300 dark:hover:bg-neutral-600"
+                href="/about"
+              >
+                philosophy
+              </Link>
+              , we provide the following services:
+            </p>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
             {/* Produce */}
@@ -94,11 +106,23 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold">Produce</h3>
               </div>
-              <p className="text-sm text-left">
-                大規模システム開発の経験を活かし現状の課題や要望から要件を明確に定義し効果的なプランを策定します。
-                実際のデザイン作業に入る前に、ビジネスの課題との対応により要件を整理することで、費用対効果の高いWebサイトの構築を可能にします。
-                見栄えの良いサイトを作って終わりでなく、御社のビジネスへの貢献を第一に考えさせていただきます。
-              </p>
+              <div className="text-base text-left">
+                <p lang="ja">
+                  大規模システム開発の経験を活かし現状の課題や要望から要件を明確に定義し効果的なプランを策定します。
+                  実際のデザイン作業に入る前に、ビジネスの課題との対応により要件を整理することで、費用対効果の高いWebサイトの構築を可能にします。
+                  見栄えの良いサイトを作って終わりでなく、御社のビジネスへの貢献を第一に考えさせていただきます。
+                </p>
+                <p lang="en">
+                  We leverage our experience in large-scale system development
+                  to clearly define requirements based on current challenges and
+                  needs, formulating effective plans. Before proceeding with the
+                  actual design work, we organize the requirements by aligning
+                  them with business challenges, enabling the creation of a
+                  cost-effective website. Rather than simply delivering a
+                  visually appealing site, we prioritize contributing to your
+                  business success.
+                </p>
+              </div>
             </article>
 
             {/* Design */}
@@ -112,12 +136,23 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold">Design</h3>
               </div>
-              <p className="text-sm text-left">
-                要件に基づいたプランに沿ってデザインを行います。
-                デザインは単なる見た目の美しさではなく、ユーザーが迷うことなく目的を達成できることを最優先に考えます。
-                最新技術から最適な技術を選択しつつ、アクセシビリティを重視した使いやすさと機能性を両立させたデザインを提供します。
-                システムの開発だけでなく、ライフサイクル全体をデザインいたします。
-              </p>
+              <div className="text-base text-left">
+                <p lang="ja">
+                  要件に基づいたプランに沿ってデザインを行います。
+                  デザインは単なる見た目の美しさではなく、ユーザーが迷うことなく目的を達成できることを最優先に考えます。
+                  最新技術から最適な技術を選択しつつ、アクセシビリティを重視した使いやすさと機能性を両立させたデザインを提供します。
+                  システムの開発だけでなく、ライフサイクル全体をデザインいたします。
+                </p>
+                <p lang="en">
+                  We design in accordance with plans based on requirements.
+                  Design is not just about visual appeal; our top priority is
+                  ensuring that users can achieve their goals without confusion.
+                  While selecting the most suitable technologies from the latest
+                  advancements, we focus on accessibility to provide a design
+                  that balances usability and functionality. We design not only
+                  system development but also the entire lifecycle.
+                </p>
+              </div>
             </article>
 
             {/* Coding */}
@@ -131,13 +166,24 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold">Coding</h3>
               </div>
-              <p className="text-sm text-left">
-                Webデザインはコードなしには成立しません。
-                コードが書けないデザイナーは、単なるデザイナーでありWebデザイナーではありません。
-                私は要件を具現化するスマートなコードを重視し、シンプルで美しくメンテナンスしやすい実装を心がけています。
-                デザインツールに依存せず、長期的に維持できる持続可能なコードを構築し、
-                柔軟性と拡張性のあるWebサイトを提供します。
-              </p>
+              <div className="text-base text-left">
+                <p lang="ja">
+                  Webデザインはコードなしには成立しません。
+                  コードが書けないデザイナーは、単なるデザイナーでありWebデザイナーではありません。
+                  私は要件を具現化するスマートなコードを重視し、シンプルで美しくメンテナンスしやすい実装を心がけています。
+                  デザインツールに依存せず、長期的に維持できる持続可能なコードを構築し、
+                  柔軟性と拡張性のあるWebサイトを提供します。
+                </p>
+                <p lang="en">
+                  Web design cannot exist without code. A designer who cannot
+                  write code is merely a designer, not a web designer. I
+                  prioritize writing smart code that brings requirements to
+                  life, ensuring a simple, elegant, and maintainable
+                  implementation. Rather than relying solely on design tools, I
+                  build sustainable code that can be maintained long-term,
+                  delivering flexible and scalable websites.
+                </p>
+              </div>
             </article>
           </div>
         </div>

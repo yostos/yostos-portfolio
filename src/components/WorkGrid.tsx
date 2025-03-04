@@ -23,11 +23,17 @@ export default function WorkGrid({ limit }: WorkGridProps) {
       title: "Inagales.com",
       description:
         "当サイトは最新のWeb技術スタックを駆使して構築されています。\
-         Next.js/Tailwind CSS/、\
-         daisyUI/Threeを組み合わせることで、\
-         モダンでレスポンシブなデザインを実現しています。\
-         スケーラブルかつ高速な。Amazon Amplify(AWS)を採用し、\
-         Amazon SESを統合した信頼性の高いフォームを実装しています。",
+        Next.js/Tailwind CSS\,\
+        daisyUI/Threeを組み合わせることで、\
+        モダンでレスポンシブなデザインを実現しています。\
+        スケーラブルかつ高速なAmazon Amplify(AWS)を採用し、\
+        Amazon SESを統合した信頼性の高いフォームを実装しています。\
+        /\
+        This site is built using the latest web technology stack.\
+        By combining Next.js\, Tailwind CSS\, daisyUI\, and Three.js\,\
+        it achieves a modern and responsive design.\
+        Utilizing scalable and high-speed Amazon Amplify (AWS)\,\
+        it implements a reliable form integrated with Amazon SES.",
       imageUrl: "/images/works/portfolio.webp",
       link: "https://portfolio.inagales.com",
     },
@@ -35,7 +41,11 @@ export default function WorkGrid({ limit }: WorkGridProps) {
       id: "music",
       title: "Music Works",
       description:
-        "ギター演奏と打ち込みを駆使し、幅広い音楽を制作。ビートルズ、80年代Fusion/Rockからアニメ劇中歌まで、多彩なジャンルに対応可能です。",
+        "ギター演奏と打ち込みを駆使し、幅広い音楽を制作。\
+        ビートルズ、80年代Fusion/Rockからアニメ劇中歌まで、多彩なジャンルに対応可能です。\
+        \
+        Utilizing guitar performance and programming, I create a wide range of music.\
+        From The Beatles and '80s Fusion/Rock to anime soundtrack songs, I can accommodate various genres.",
       imageUrl: "/images/works/music.webp",
       link: "/works/music",
     },
@@ -44,8 +54,12 @@ export default function WorkGrid({ limit }: WorkGridProps) {
       title: "New Year Greeting Site",
       description:
         "このサイトはJavascriptで動的な動きを取り込んだサイト例です。\
-         特殊なフォントと効果の組み合わせで、80年代風のレトロなゲーム画面を意識したデザインとしています。\
-         また、使用している楽曲、グラフィックの制作も行っています。",
+        特殊なフォントと効果の組み合わせで、80年代風のレトロなゲーム画面を意識したデザインとしています。\
+        また、使用している楽曲、グラフィックの制作も行っています。\
+        \
+        This site is an example of incorporating dynamic motion using JavaScript.\
+        By combining unique fonts and effects, it is designed with a retro 80s game screen aesthetic in mind.\
+        Additionally, I also create the music and graphics used in this site.",
       imageUrl: "/images/works/new-year.webp",
       link: "https://www.inagales.com/new-years-greetings/",
     },

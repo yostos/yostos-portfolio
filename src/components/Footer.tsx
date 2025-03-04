@@ -35,7 +35,7 @@ export default function Footer() {
             <span>(Source)</span>
           </div>
           <Link href="/license" className="text-sm hover:underline">
-            ライセンス情報
+            Terms of Use & License
           </Link>
         </div>
       </div>
