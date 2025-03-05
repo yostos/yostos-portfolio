@@ -153,9 +153,13 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <span className="text-neutral-content/40 cursor-not-allowed block py-2">
+              <Link
+                href="/posts"
+                className="hover:opacity-80 transition-colors block py-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
                 Posts
-              </span>
+              </Link>
             </li>
             <li>
               <Link
