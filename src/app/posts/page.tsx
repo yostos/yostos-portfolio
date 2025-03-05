@@ -87,7 +87,7 @@ export default function WebDesignGuide() {
         </div>
 
         <section className="text-base">
-          <h2 className="text-2xl font-bold mb-6 text-gray-600">
+          <h2 className="text-2xl font-bold mb-6 text-base-content">
             Webデザイナーの種別
           </h2>
 
@@ -101,7 +101,7 @@ export default function WebDesignGuide() {
           <div className="overflow-x-auto px-4 py-2">
             <table className="text-xs table w-full border-collapse">
               <thead>
-                <tr className="bg-gray-500 text-gray-100 dark:bg-gray-600">
+                <tr className="bg-gray-500 text-gray-100 dark:bg-gray-700 dark:text-white">
                   <th className="w-16 whitespace-nowrap">レベル</th>
                   <th className="w-48 whitespace-nowrap">カテゴリ</th>
                   <th className="px-3">仕事内容（Webデザイナーの関与領域）</th>
@@ -237,7 +237,7 @@ export default function WebDesignGuide() {
         </section>
 
         <section className="text-base">
-          <h2 className="text-2xl font-bold mt-12 mb-6 text-gray-600">
+          <h2 className="text-2xl font-bold mt-8 mb-6 text-base-content">
             制作するWebサイトの種類
           </h2>
           <p>
@@ -247,7 +247,7 @@ export default function WebDesignGuide() {
           <div className="overflow-x-auto">
             <table className="text-xs table w-full border-collapse">
               <thead>
-                <tr className="bg-gray-500 text-gray-100 dark:bg-gray-600">
+                <tr className="bg-gray-500 text-gray-100 dark:bg-gray-700 dark:text-white">
                   <th className="w-30 whitespace-nowrap px-2">カテゴリ</th>
                   <th className="w-80">目的</th>
                   <th className="">主な特徴</th>
@@ -351,7 +351,7 @@ export default function WebDesignGuide() {
         </section>
 
         <section className="text-base">
-          <h2 className="text-2xl font-bold mt-12 mb-6 text-gray-600">
+          <h2 className="text-2xl font-bold mt-8 mb-6 text-base-content">
             Webデザイン市場分析（Webサイトの種類 × Webデザイナータイプ）
           </h2>
 
@@ -361,7 +361,7 @@ export default function WebDesignGuide() {
           <div className="overflow-x-auto">
             <table className="text-xs table w-full border-collapse">
               <thead>
-                <tr className="bg-gray-500 text-gray-100 dark:bg-gray-600">
+                <tr className="bg-gray-500 text-gray-100 dark:bg-gray-700 dark:text-white">
                   <th className="sticky left-00">Webサイトの種類</th>
                   <th className="w-20">需要の多さ</th>
                   <th className="w-20">成長性</th>
@@ -376,7 +376,7 @@ export default function WebDesignGuide() {
               </thead>
               <tbody>
                 <tr>
-                  <td className="sticky left-0 bg-gray-100 font-medium z-10">
+                  <td className="sticky left-0 bg-gray-100 dark:bg-gray-700 font-medium z-10 text-gray-800 dark:text-gray-200">
                     情報提供型サイト
                   </td>
                   <td className="whitespace-nowrap">{renderStars(3)}</td>
@@ -390,7 +390,7 @@ export default function WebDesignGuide() {
                   <td className="text-center">{renderSuitability("◎")}</td>
                 </tr>
                 <tr>
-                  <td className="sticky left-0 bg-gray-100 font-medium z-10">
+                  <td className="sticky left-0 bg-gray-100 dark:bg-gray-700 font-medium z-10 text-gray-800 dark:text-gray-200">
                     コンテンツ配信型サイト
                   </td>
                   <td className="whitespace-nowrap">{renderStars(3)}</td>
@@ -404,7 +404,7 @@ export default function WebDesignGuide() {
                   <td className="text-center">{renderSuitability("◎")}</td>
                 </tr>
                 <tr>
-                  <td className="sticky left-0 bg-gray-100 font-medium z-10">
+                  <td className="sticky left-0 bg-gray-100 dark:bg-gray-700 font-medium z-10 text-gray-800 dark:text-gray-200">
                     商取引型サイト（Eコマース）
                   </td>
                   <td className="whitespace-nowrap">{renderStars(5)}</td>
@@ -418,7 +418,7 @@ export default function WebDesignGuide() {
                   <td className="text-center">{renderSuitability("◎")}</td>
                 </tr>
                 <tr>
-                  <td className="sticky left-0 bg-gray-100 font-medium z-10">
+                  <td className="sticky left-0 bg-gray-100 dark:bg-gray-700 font-medium z-10 text-gray-800 dark:text-gray-200">
                     マーケティング・プロモーション型サイト
                   </td>
                   <td className="whitespace-nowrap">{renderStars(5)}</td>
@@ -432,7 +432,7 @@ export default function WebDesignGuide() {
                   <td className="text-center">{renderSuitability("○")}</td>
                 </tr>
                 <tr>
-                  <td className="sticky left-0 bg-gray-100 font-medium z-10">
+                  <td className="sticky left-0 bg-gray-100 dark:bg-gray-700 font-medium z-10 text-gray-800 dark:text-gray-200">
                     Webアプリ
                   </td>
                   <td className="whitespace-nowrap">{renderStars(5)}</td>
@@ -516,7 +516,7 @@ export default function WebDesignGuide() {
             <p>コードは力なり、まさに上忍。</p>
           </section>
           <section>
-            <h2 className="text-2xl font-bold mt-12 mb-6 text-gray-600">
+            <h2 className="text-2xl font-bold mt-8 mb-6 text-base-content">
               Conclusion
             </h2>
             <p>こう見ていくと、どこを目指すか明確です。</p>
