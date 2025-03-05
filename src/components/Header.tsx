@@ -82,9 +82,17 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <span className="text-neutral-content/40 cursor-not-allowed">
+              <Link href="/news" className="hover:opacity-80 transition-colors">
+                News
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/posts"
+                className="hover:opacity-80 transition-colors"
+              >
                 Posts
-              </span>
+              </Link>
             </li>
             <li>
               <Link

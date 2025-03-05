@@ -11,37 +11,6 @@ import Cube3D from "@/components/Cube3D";
 import WorkGrid from "@/components/WorkGrid";
 import NewsComponent from "@/components/NewsComponent";
 
-// ニュースデータの配列
-const news = [
-  {
-    date: "2025-03-04",
-    title: "退校記念",
-    description:
-      "手続きが終わりひと段落ついたので、ニュース機能をつけてみました。",
-    link: "/",
-  },
-  {
-    date: "2025-03-02",
-    title: "The Worst Birthday",
-    description: "最悪に気分が悪い誕生日だったので、Worksに音楽を追加した。",
-    link: "/",
-  },
-  {
-    date: "2025-03-01",
-    title: "注意！",
-    description: "このサイトは予告なく停止、閉鎖されることがあります。",
-    link: "/",
-  },
-  {
-    date: "2025-03-01",
-    title: "サイト目的",
-    description:
-      "当てにできない他人は無視して自己研鑽。Web技術とデザイン検証のための片手間の練習用ポートフォリオ。",
-    link: "/",
-  },
-  // 他のニュースアイテム...
-];
-
 export default function Home() {
   return (
     <main className="min-h-screen flex flex-col items-center justify-center bg-base-100 px-4">
@@ -66,7 +35,8 @@ export default function Home() {
       </div>
 
       {/*ニュースセクション */}
-      <NewsComponent items={news} limit={5} />
+
+      <NewsComponent limit={5} />
 
       {/* サービスセクション */}
       <section className="w-full bg-neutral-100 dark:bg-neutral-800 py-4 px-4">

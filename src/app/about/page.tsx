@@ -1,7 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import Cube3D from "@/components/Cube3D";
 
 const principles = [
   {
@@ -87,22 +86,14 @@ export default function About() {
         <h1 className="text-4xl font-bold text-center mb-12">Our Principles</h1>
 
         {/* ヒーローセクション */}
-        <div className="max-w-6xl mx-auto py-16 flex items-center space-x-6">
-          <div className="w-3/4 h-3/4">
-            <Cube3D
-              text="Inagales.com"
-              subtitle="Digital Craftsman ( Architect / Developer / Designer )"
-            />
-          </div>
-          <div className="w-1/2">
-            <h1 className="text-4xl font-bold mb-4">
-              &quot; Design the Era. Code with Vera. &ldquo;
-            </h1>
-            <p className="text-lg mb-8">
-              時代をデザインし真実をコードするため、私たちは次の理念に則り常に行動します。
-            </p>
-          </div>
-        </div>
+        <section className="my-3 py-2 border-y border-neutral-content/10 text-center">
+          <h2 className="text-3xl font-bold mb-4 text-neutral-500 dark:text-neutral-100">
+            Design the Era. Code with Vera.
+          </h2>
+          <p className="text-lg text-center mb-8  text-neutral-500 dark:text-neutral-100">
+            時代をデザインし真実をコードするため、私たちは次の理念に則り常に行動します。
+          </p>
+        </section>
 
         {/* 各原則セクション */}
         <div className="space-y-8 mt-8">

@@ -1,5 +1,44 @@
 import React from "react";
 import Link from "next/link";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faNewspaper } from "@fortawesome/free-solid-svg-icons";
+// ニュースデータの配列
+const news = [
+  {
+    date: "2025-03-05",
+    title: "新記事",
+    description: "記事「Webデザイナーの忍者的生き残り戦術」を書いてみました。",
+    link: "/posts",
+  },
+  {
+    date: "2025-03-04",
+    title: "ニュース追加",
+    description:
+      "退校手続きが終わりひと段落ついたので、ニュース機能をつけてみました。",
+    link: "/news",
+  },
+  {
+    date: "2025-03-04",
+    title: "英語表記",
+    description:
+      "知り合いから「日本語で読めねぇ」と言われ、国際化対応するほどでもないのでビジーになりましたが英語を併記しました。",
+    link: "/news",
+  },
+  {
+    date: "2025-03-02",
+    title: "The Worst Birthday",
+    description: "最悪に気分が悪い誕生日だったので、Worksに音楽を追加した。",
+    link: "/works",
+  },
+  {
+    date: "2025-03-01",
+    title: "サイト目的",
+    description:
+      "Web技術とデザイン検証のための片手間の練習用ポートフォリオ。そのため、予告なく停止、閉鎖されることがあります。",
+    link: "/",
+  },
+  // 他のニュースアイテム...
+];
 
 // ニュースアイテムの型定義
 export type NewsItem = {
@@ -10,23 +49,41 @@ export type NewsItem = {
 };
 
 type NewsComponentProps = {
-  items: NewsItem[];
+  // items: NewsItem[];
   limit?: number; // 表示上限（デフォルト値は下で設定）
 };
 
-const NewsComponent: React.FC<NewsComponentProps> = ({ items, limit = 5 }) => {
+const NewsComponent: React.FC<NewsComponentProps> = ({ limit = 5 }) => {
   // 日付のフォーマット関数
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
-    return `${date.getFullYear()}年${date.getMonth() + 1}月${date.getDate()}日`;
+    const monthNames = [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec",
+    ];
+    return `${monthNames[date.getMonth()]} ${date.getDate().toString().padStart(2, "0")}, ${date.getFullYear()}`;
   };
 
   // 表示上限に基づいてアイテムを制限
-  const displayItems = items.slice(0, limit);
+  const displayItems = news.slice(0, limit);
 
   return (
     <div className="w-full max-w-4xl mx-auto">
-      <h2 className="text-xl font-bold mb-4 text-neutral-800 dark:text-neutral-100">
+      <h2 className="text-2xl font-bold mb-4 text-neutral-800 dark:text-neutral-100">
+        <FontAwesomeIcon
+          icon={faNewspaper}
+          className="text-3xl font-regular text-neutral-700 dark:text-neutral-200 mr-2"
+        />
         News
       </h2>
 
@@ -73,7 +130,7 @@ const NewsComponent: React.FC<NewsComponentProps> = ({ items, limit = 5 }) => {
         </div>
       )}
 
-      {items.length > limit && (
+      {news.length > limit && (
         <div className="mt-6 text-center">
           <Link
             href="/news"
