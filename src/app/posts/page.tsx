@@ -86,7 +86,7 @@ export default function WebDesignGuide() {
           </div>
         </div>
 
-        <section className="text-sm">
+        <section className="text-base">
           <h2 className="text-2xl font-bold mb-6 text-gray-600">
             Webデザイナーの種別
           </h2>
@@ -236,7 +236,7 @@ export default function WebDesignGuide() {
           </div>
         </section>
 
-        <section className="text-sm">
+        <section className="text-base">
           <h2 className="text-2xl font-bold mt-12 mb-6 text-gray-600">
             制作するWebサイトの種類
           </h2>
@@ -350,7 +350,7 @@ export default function WebDesignGuide() {
           </div>
         </section>
 
-        <section className="text-sm">
+        <section className="text-base">
           <h2 className="text-2xl font-bold mt-12 mb-6 text-gray-600">
             Webデザイン市場分析（Webサイトの種類 × Webデザイナータイプ）
           </h2>
@@ -516,11 +516,21 @@ export default function WebDesignGuide() {
             <p>コードは力なり、まさに上忍。</p>
           </section>
           <section>
+            <h2 className="text-2xl font-bold mt-12 mb-6 text-gray-600">
+              Conclusion
+            </h2>
+            <p>こう見ていくと、どこを目指すか明確です。</p>
             <p>
-              こう見ていくと、どこを目指すか明確です。
-              HTML/CSSだけで、Webで飯が食えるとかお花畑な世界がどこかにあると良いのですが・・・
+              HTML/CSSだけで、Webで飯が食えるとかお花畑な世界がどこかにあると良いのですが、残念ながらそれは茨の道です。
+              生きてくだけならば、下忍のようにSIerやアフィリエイト業者のしたでHTMLを量産する仕事はしばらくあるかもしれません。
+              こんなデザイナー・エンジニアはたくさんいます。下忍ですから。
             </p>
-            <p className="text-lg my-8">世界は残酷です。</p>
+            <p>
+              自由に仕事をするには、上忍になるに限ります。
+              HTML/CSSなんて当たり前、CMSも対応でき、モダンな技術スタックやAI、サービスAPIの活用などどんどん技術領域を広げ、
+              フォントやグラフィック、動画、音楽制作などもこなし、空撮もできる、そんなフルスタックエンジニアしか生き残れにない世界です。
+            </p>
+            <p className="text-lg font-bold my-8">世界は残酷です。</p>
           </section>
         </section>
       </article>
