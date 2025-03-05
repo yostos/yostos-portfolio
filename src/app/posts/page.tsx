@@ -458,7 +458,7 @@ export default function WebDesignGuide() {
               達人でないと悲惨です。
             </p>
           </section>
-          <section className="my-2">
+          <section className="my-4">
             <p>
               <strong>ノンコード/ローコード職人</strong>は論外です。
               Webデザイナーを含む非技術者が<strong>いなくても</strong>
@@ -466,7 +466,7 @@ export default function WebDesignGuide() {
             </p>
           </section>
 
-          <section className="my-2">
+          <section className="my-4">
             <p>
               <strong>手打ちHTML職人</strong>と
               <strong>レガシーWebアプリUI職人</strong>、いわゆる
@@ -478,7 +478,7 @@ export default function WebDesignGuide() {
             </p>
           </section>
 
-          <section className="my-2">
+          <section className="my-4">
             <p>
               企業の多くがコーポレートサイトにCMSを利用しているので
               <strong>CMS設定職人</strong>は一定の需要があるでしょう。
@@ -492,7 +492,7 @@ export default function WebDesignGuide() {
             </p>
           </section>
 
-          <section className="my-2">
+          <section className="my-4">
             <p>
               <strong>EC特化職人</strong>
               についてはECサイトを構築するツールに長けていれば案件も多く単価も高いので、
@@ -501,7 +501,7 @@ export default function WebDesignGuide() {
               SEOやメールマーケティングなどのスキルやノウハウが必要になってきます。
             </p>
           </section>
-          <section className="my-2">
+          <section className="my-4">
             <p>
               <strong>フルスタックエンジニア</strong>
               は、その名の通り、デザインからフロントエンド、バックエンドまでWebサイトのすべてを開発できます。
@@ -530,7 +530,10 @@ export default function WebDesignGuide() {
               HTML/CSSなんて当たり前、CMSも対応でき、モダンな技術スタックやAI、サービスAPIの活用などどんどん技術領域を広げ、
               フォントやグラフィック、動画、音楽制作などもこなし、空撮もできる、そんなフルスタックエンジニアしか生き残れにない世界です。
             </p>
-            <p className="text-lg font-bold my-8">世界は残酷です。</p>
+            <p className="my-4">
+              こう書くと身も蓋もありませんが・・
+              <span className="text-lg font-bold my-8">世界は残酷です</span>。
+            </p>
           </section>
         </section>
       </article>
