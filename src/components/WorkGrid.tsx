@@ -50,6 +50,21 @@ export default function WorkGrid({ limit }: WorkGridProps) {
       link: "/works/music",
     },
     {
+      id: "anochan",
+      title: "Chatbot あのちゃん",
+      description:
+        "OpenAIのChatCompletion APIを利用してStreamItで作ったあのちゃんのように話す(?)チャットボット。\
+         OpenAIが話題になり始めた2023年6月くらいに遊びで作ったもの。\
+         あのちゃんのテレビ発言やツイートを少しだけ食わしただけなので、あのちゃんっぽいかどうかは疑問ですが。\
+        \
+A chatbot created with StreamIt that talks like Ano-chan (?) using OpenAI's ChatCompletion API.\
+I made this for fun around June 2023 when OpenAI was becoming a hot topic.\
+Since I only fed it a small amount of Ano-chan's TV statements and tweets, I'm not sure if it actually resembles Ano-chan or not.\
+      ",
+      imageUrl: "/images/works/ano.webp",
+      link: "https://yostos-chatbot-ano-srcapp-1amc4o.streamlit.app/",
+    },
+    {
       id: "new-year",
       title: "New Year Greeting Site",
       description:
