@@ -8,7 +8,7 @@ export function getBerkeleyMonoFontStyles() {
       font-family: 'BerkeleyMono';
       src: url('${fontUrl}') format('woff2');
       font-display: swap;
-      font-weight: 400;
+      font-weight: 400 900;
       font-style: normal;
     }
   `;
