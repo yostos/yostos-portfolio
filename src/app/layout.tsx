@@ -36,7 +36,7 @@ export default function RootLayout({
         <Footer />
         {tinylyticsId && (
           <Script
-            src={`https://tinylytics.app/embed/${tinylyticsId}.js?kudos&countries&hit&webring`}
+            src={`https://tinylytics.app/embed/${tinylyticsId}.js?countries`}
             strategy="afterInteractive"
           />
         )}
