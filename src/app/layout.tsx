@@ -1,18 +1,16 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Noto_Sans_JP } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Script from "next/script";
+import { getBerkeleyMonoFontStyles } from "./fonts";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const notoSansJP = Noto_Sans_JP({
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "500", "700"], // 必要な太さを指定
+  variable: "--font-noto-sans-jp",
+  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -27,9 +25,18 @@ export default function RootLayout({
 }>) {
   const tinylyticsId = process.env.NEXT_PUBLIC_TINYLYTICS_ID;
   return (
-    <html lang="en" data-theme="portfolioTheme">
+    <html lang="ja" data-theme="portfolioTheme" className={notoSansJP.variable}>
+      <head>
+        <meta charSet="UTF-8"></meta>
+        <style
+          dangerouslySetInnerHTML={{ __html: getBerkeleyMonoFontStyles() }}
+        />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`flex flex-col min-h-screen`}
+        style={{
+          fontFamily: "BerkeleyMono, var(--font-noto-sans-jp), sans-serif",
+        }}
       >
         <Header />
         <div className="flex-grow">{children}</div>

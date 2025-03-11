@@ -5,6 +5,13 @@ import { faNewspaper } from "@fortawesome/free-solid-svg-icons";
 // ニュースデータの配列
 const news = [
   {
+    date: "2999-03-01",
+    title: "このサイトについて",
+    description:
+      "暇つぶしに作ったWeb技術とデザイン検証のための練習用ポートフォリオです。そのため、予告なく停止、閉鎖されることがあります。",
+    link: "/",
+  },
+  {
     date: "2025-03-05",
     title: "新記事",
     description: "記事「Webデザイナーの忍者的生き残り戦術」を書いてみました。",
@@ -29,13 +36,6 @@ const news = [
     title: "The Worst Birthday",
     description: "最悪に気分が悪い誕生日だったので、Worksに音楽を追加した。",
     link: "/works",
-  },
-  {
-    date: "2025-03-01",
-    title: "サイト目的",
-    description:
-      "Web技術とデザイン検証のための片手間の練習用ポートフォリオ。そのため、予告なく停止、閉鎖されることがあります。",
-    link: "/",
   },
   // 他のニュースアイテム...
 ];

@@ -97,6 +97,8 @@ export default function WebDesignGuide() {
           </p>
           <p>
             スキルレベルをこれまでの観測を元に勝手に忍者的に解釈したものです。特定の職種を貶める意図はありません。
+            <br />
+            というか単に映画『Under Ninja』を見て感化されただけ・・・
           </p>
           <div className="overflow-x-auto px-4 py-2">
             <table className="text-xs table w-full border-collapse">
@@ -114,10 +116,10 @@ export default function WebDesignGuide() {
                     特殊
                   </td>
                   <td className="border border-gray-300 dark:border-gray-600">
-                    グラフィック職人
+                    グラフィック忍者
                   </td>
                   <td className="border border-gray-300 dark:border-gray-600 px-3">
-                    審美眼やデッサン力、デザインセンスでイラスト、画像加工などで勝負する職人。基本的はHTML/CSSなども多少必要
+                    審美眼やデッサン力、デザインセンスでイラスト、画像加工などで勝負する忍者。基本的はHTML/CSSなども多少必要
                   </td>
                   <td className="border border-gray-300 dark:border-gray-600">
                     <ul className="list-disc pl-5">
@@ -130,7 +132,7 @@ export default function WebDesignGuide() {
                     一般人
                   </td>
                   <td className="border border-gray-300 dark:border-gray-600">
-                    ノーコード/ローコード職人
+                    ノーコード/ローコード忍者
                   </td>
                   <td className="border border-gray-300 dark:border-gray-600 px-3">
                     コーディングを必要としないタイプCMS機能を利用したサイト構築を支援する対応。専門家でない人がサイトを構築できることを目指したツールなので、これを職種にするのは愚か。
@@ -149,7 +151,7 @@ export default function WebDesignGuide() {
                     下忍
                   </td>
                   <td className="border border-gray-300 dark:border-gray-600">
-                    手打ちHTML職人
+                    手打ちHTML忍者
                   </td>
                   <td className="border border-gray-300 dark:border-gray-600 px-3">
                     デザインカンプを作成し、HTML/CSSを手書きでコーディング。JSで簡単な動きをつける。お客様が自分で更新することは想定せず、都度修正対応し納品する。
@@ -165,10 +167,10 @@ export default function WebDesignGuide() {
                 </tr>
                 <tr>
                   <td className="border border-gray-300 dark:border-gray-600">
-                    レガシーWebアプリUI職人
+                    レガシーWebアプリUI忍者
                   </td>
                   <td className="border border-gray-300 dark:border-gray-600 px-3">
-                    基本的は手打ちHTML職人。バックエンドについて行うならばデザイナーでなく、ITエンジニアとして設計・開発スキルが必要。大抵は別部隊でバックエンドは開発していて、前提を渡されて画面のHTMLだけを作る。
+                    基本的は手打ちHTML忍者。バックエンドについて行うならばデザイナーでなく、ITエンジニアとして設計・開発スキルが必要。大抵は別部隊でバックエンドは開発していて、前提を渡されて画面のHTMLだけを作る。
                   </td>
                   <td className="border border-gray-300 dark:border-gray-600">
                     <ul className="list-disc pl-5">
@@ -185,10 +187,10 @@ export default function WebDesignGuide() {
                     中忍
                   </td>
                   <td className="border border-gray-300 dark:border-gray-600">
-                    CMS設定職人
+                    CMS設定忍者
                   </td>
                   <td className="border border-gray-300 dark:border-gray-600 px-3">
-                    手打ちHTML職人がCMS/SSGの設定方法を習得し、CMS/SSGでHTML/CSSに加えこれらのテンプレート機能の知識を習得してサイトテーマのデザインが可能となる。デザインカンプ作成後、それを具体化するテンプレートをコードできる。さらにCMS/SSGの環境設定、テーマのカスタマイズ、権限設定、本番設置、運用セットアップを行い、非技術者のお客様に引き継げる。
+                    手打ちHTML忍者がCMS/SSGの設定方法を習得し、CMS/SSGでHTML/CSSに加えこれらのテンプレート機能の知識を習得してサイトテーマのデザインが可能となる。デザインカンプ作成後、それを具体化するテンプレートをコードできる。さらにCMS/SSGの環境設定、テーマのカスタマイズ、権限設定、本番設置、運用セットアップを行い、非技術者のお客様に引き継げる。
                     企業案件でSSGはほとんど外注されないので、基本的にはCMS、しかもほぼWordPress。
                   </td>
                   <td className="border border-gray-300 dark:border-gray-600">
@@ -200,11 +202,11 @@ export default function WebDesignGuide() {
                 </tr>
                 <tr>
                   <td className="border border-gray-300 dark:border-gray-600">
-                    EC特化職人
+                    EC特化忍者
                   </td>
                   <td className="border border-gray-300 dark:border-gray-600 px-3">
                     ECサイトのデザインを作成し、ShopifyやBASEのテンプレートをカスタマイズ。商品ページやカート画面のデザインを調整し、EC運営に必要なバナーや広告素材の制作も担当。
-                    CMS職人のCMSがECサイトツールになったと思えば良い。SEOに関するノウハウも必要になってくる。
+                    CMS忍者のCMSがECサイトツールになったと思えば良い。SEOに関するノウハウも必要になってくる。
                   </td>
                   <td className="border border-gray-300 dark:border-gray-600">
                     <ul className="list-disc pl-5">
@@ -242,7 +244,7 @@ export default function WebDesignGuide() {
           </h2>
           <p>
             次に「Webデザイナー」が関わりそうな仕事のタイプを分離してみました。
-            どうか動画や音楽配信サイトのようなものは、Webデザイナーとして出会う方は限られていると思いますので、割愛しています。
+            どうか動画や音楽配信サイトのようなもの(NetflixやSpotifyのようなサービス)は、Webデザイナーとして出会う方は限られていると思いますので、割愛しています。
           </p>
           <div className="overflow-x-auto">
             <table className="text-xs table w-full border-collapse">
@@ -365,12 +367,12 @@ export default function WebDesignGuide() {
                   <th className="sticky left-00">Webサイトの種類</th>
                   <th className="w-20">需要の多さ</th>
                   <th className="w-20">成長性</th>
-                  <th className="w-20">グラフィック職人</th>
-                  <th className="w-20">ノーコード/ローコード職人</th>
-                  <th className="w-20">手打ちHTML職人</th>
-                  <th className="w-20">レガシーWebアプリUI職人</th>
-                  <th className="w-20">CMS設定職人</th>
-                  <th className="w-20">EC特化職人</th>
+                  <th className="w-20">グラフィック忍者</th>
+                  <th className="w-20">ノーコード/ローコード忍者</th>
+                  <th className="w-20">手打ちHTML忍者</th>
+                  <th className="w-20">レガシーWebアプリUI忍者</th>
+                  <th className="w-20">CMS設定忍者</th>
+                  <th className="w-20">EC特化忍者</th>
                   <th className="w-20">フルスタックエンジニア</th>
                 </tr>
               </thead>
@@ -460,7 +462,7 @@ export default function WebDesignGuide() {
           </section>
           <section className="my-4">
             <p>
-              <strong>ノンコード/ローコード職人</strong>は論外です。
+              <strong>ノンコード/ローコード忍者</strong>は論外です。
               Webデザイナーを含む非技術者が<strong>いなくても</strong>
               Webサイトを構築できるツールを前提にしているので、これを職種に選ぶ選択は愚かです。
             </p>
@@ -468,8 +470,8 @@ export default function WebDesignGuide() {
 
           <section className="my-4">
             <p>
-              <strong>手打ちHTML職人</strong>と
-              <strong>レガシーWebアプリUI職人</strong>、いわゆる
+              <strong>手打ちHTML忍者</strong>と
+              <strong>レガシーWebアプリUI忍者</strong>、いわゆる
               <strong>下忍</strong>ですが、
               非常に活躍できる領域が限られています。
               Illustratorでデザインカンプを書いてクライアントを交渉しながら、シコシコとHTML/CSSに書き起こして行くという1990年代的スタイルの
@@ -481,7 +483,7 @@ export default function WebDesignGuide() {
           <section className="my-4">
             <p>
               企業の多くがコーポレートサイトにCMSを利用しているので
-              <strong>CMS設定職人</strong>は一定の需要があるでしょう。
+              <strong>CMS設定忍者</strong>は一定の需要があるでしょう。
               HTML/CSSだけでなく、CMSのテーマを開発、カスタマイズできる能力が必要なので、CMS独自のテンプレート機能の理解、
               CSSだけでなく、CSSプリコンパイラの使いこなしなどが必要です。
               また、多くのCMSはHTMLでなくMarkdown記法をサポートしているので、知らないと恥をかきます。
@@ -494,7 +496,7 @@ export default function WebDesignGuide() {
 
           <section className="my-4">
             <p>
-              <strong>EC特化職人</strong>
+              <strong>EC特化忍者</strong>
               についてはECサイトを構築するツールに長けていれば案件も多く単価も高いので、
               活躍できる場は多いと思います。ただし、企業のビジネスに直結する領域なので、クライアントとの契約も
               請負契約で瑕疵担保付きなどになってくるので、それなりの企業に所属して活動するというのが現実的でしょう。
