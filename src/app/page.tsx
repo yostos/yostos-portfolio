@@ -39,7 +39,7 @@ export default function Home() {
       <NewsComponent limit={5} />
 
       {/* サービスセクション */}
-      <section className="w-full bg-neutral-100 dark:bg-neutral-800 py-4 px-4">
+      <section className="w-full py-4 px-4">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-3xl font-bold text-center mb-2">Service</h2>
           <div className="text-center mb-8">

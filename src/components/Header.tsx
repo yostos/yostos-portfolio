@@ -11,7 +11,7 @@ export default function Header() {
   };
 
   return (
-    <header className="bg-neutral text-neutral-content py-4">
+    <header className="bg-neutral-800 dark:bg-neutral-100 text-neutral-100 dark:text-neutral-800 py-4">
       <div className="container mx-auto px-4 flex items-center justify-between">
         <div className="flex items-center">
           <Link href="/" className="text-xl font-medium flex items-center">

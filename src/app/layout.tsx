@@ -33,7 +33,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`flex flex-col min-h-screen`}
+        className={`flex flex-col min-h-screen bg-neutral-100 dark:bg-neutral-800 text-neutral-800 dark:text-neutral-100 `}
         style={{
           fontFamily: "BerkeleyMono, var(--font-mplus-1-code), sans-serif",
         }}
