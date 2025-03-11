@@ -39,6 +39,18 @@ export default function Footer() {
           </Link>
         </div>
       </div>
+      <section>
+        <span className="tinylytics_hits"></span>
+        <button className="tinylytics_kudos"></button>
+        <div>
+          <span className="tinylytics_countries"></span>
+        </div>
+        <div>
+          <a href="" className="tinylytics_webring">
+            🕸️💍
+          </a>
+        </div>
+      </section>
     </footer>
   );
 }
