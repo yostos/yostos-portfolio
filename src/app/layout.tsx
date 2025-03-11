@@ -8,7 +8,7 @@ import "./globals.css";
 
 const mPlus1Code = M_PLUS_1_Code({
   subsets: ["latin"],
-  weight: ["400", "500", "700"], // 必要な太さを指定
+  weight: ["300", "700"], // 必要な太さを指定
   variable: "--font-mplus-1-code",
   preload: true,
 });
