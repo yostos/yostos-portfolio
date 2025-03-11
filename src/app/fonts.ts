@@ -1,7 +1,7 @@
 // 例: src/utils/fonts.ts
 export function getBerkeleyMonoFontStyles() {
   const fontUrl =
-    "https://berkeley-mono.s3.ap-northeast-1.amazonaws.com/Berkeley+Mono+Variable.woff2";
+    "https://d3w0x7oesq9q1.cloudfront.net/Berkeley+Mono+Variable.woff2";
 
   return `
     @font-face {
