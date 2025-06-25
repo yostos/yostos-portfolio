@@ -12,6 +12,13 @@ const news = [
     link: "/",
   },
   {
+    date: "2025-06-25",
+    title: "卒業",
+    description:
+      "すっかり忘れてしまったが、あの人たちは卒業できたのだろうか。あれを卒業して意味があるか微妙だが。",
+    link: "/posts",
+  },
+  {
     date: "2025-03-22",
     title: "脆弱性",
     description:
