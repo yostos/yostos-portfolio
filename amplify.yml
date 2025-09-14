@@ -10,7 +10,7 @@ frontend:
   artifacts:
     baseDirectory: .next
     files:
-      - '**/*'
+      - "**/*"
   cache:
     paths:
       - node_modules/**/*
@@ -21,4 +21,5 @@ frontend:
     buildImage: amplify:al2023
   runtime:
     nodejs:
-      version: 24
+      version: 20
+
