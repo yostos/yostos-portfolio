@@ -8,12 +8,14 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - `npm run build` - Build the production application
 - `npm run start` - Start the production server
 - `npm run lint` - Run ESLint checks
+- gh - GitHub CLI (gh) is a command-line tool that brings GitHub's features
 
 ## Project Architecture
 
 This is a Next.js 15 portfolio website built with the App Router architecture. The project follows a component-based structure with TypeScript and Tailwind CSS.
 
 ### Key Technologies
+
 - **Next.js 15** with App Router for routing and SSR
 - **React 19** for UI components
 - **TypeScript** for type safety
@@ -25,22 +27,26 @@ This is a Next.js 15 portfolio website built with the App Router architecture. T
 ### Architecture Overview
 
 **App Structure (`src/app/`)**:
+
 - Uses Next.js App Router with nested layouts
 - Each route has its own `page.tsx` file
 - API routes in `src/app/api/` for server-side functionality
 - Contact form API endpoint at `src/app/api/contact/route.ts`
 
 **Component Structure (`src/components/`)**:
+
 - Reusable UI components (Header, Footer, WorkGrid, etc.)
 - 3D interactive components (Cube3D using React Three Fiber)
 - Specialized components (SoundCloudPlayer, NewsComponent)
 
 **Styling System**:
+
 - Custom daisyUI theme defined in `tailwind.config.js`
 - Dark/light mode support with theme switching
 - Custom fonts: M PLUS 1 Code and BerkeleyMono
 
 **Contact Form Integration**:
+
 - AWS SES integration for email sending
 - Requires environment variables for AWS credentials
 - Form validation and error handling
@@ -71,3 +77,4 @@ NEXT_PUBLIC_TINYLYTICS_ID=optional_analytics_id
 - Path aliases configured: `@/*` maps to `src/*`
 - Font optimization handled by Next.js font system
 - 3D graphics require WebGL support
+
