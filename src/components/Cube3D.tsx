@@ -2,8 +2,8 @@
 
 import { useRef, useState } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
-import { Billboard, OrbitControls, Text } from "@react-three/drei";
-import { Mesh } from "three";
+import { Html, OrbitControls } from "@react-three/drei";
+import * as THREE from "three";
 
 interface BoxProps {
   position: [number, number, number];
@@ -21,7 +21,7 @@ interface SubtitleProps {
 
 function Box({ position }: BoxProps) {
   // Rotation state
-  const meshRef = useRef<Mesh>(null!);
+  const meshRef = useRef<THREE.Mesh>(null!);
   const [hovered, setHover] = useState(false);
   const [active, setActive] = useState(false);
 
@@ -51,54 +51,51 @@ function Box({ position }: BoxProps) {
 }
 
 function FloatingText({ text, position }: CubeTextProps) {
-  const textRef = useRef<Mesh>(null!);
+  const groupRef = useRef<THREE.Group>(null!);
 
   // テキストを少しアニメーションさせる
   useFrame((state) => {
-    if (textRef.current) {
+    if (groupRef.current) {
       // 上下に微妙に浮遊するアニメーション
-      textRef.current.position.y =
+      groupRef.current.position.y =
         position[1] + Math.sin(state.clock.elapsedTime) * 0.1;
     }
   });
 
   return (
-    <Text
-      ref={textRef}
-      position={position}
-      fontSize={0.7}
-      fontWeight={700}
-      color="#000000"
-      anchorX="center"
-      anchorY="middle"
-      strokeWidth={0.01}
-      strokeColor="#333333"
-    >
-      {text}
-    </Text>
+    <group ref={groupRef} position={position}>
+      <Html center>
+        <div
+          style={{
+            fontSize: "24px",
+            fontWeight: 700,
+            color: "#000000",
+            whiteSpace: "nowrap",
+          }}
+        >
+          {text}
+        </div>
+      </Html>
+    </group>
   );
 }
 
 // 左下に固定されたサブタイトルコンポーネント
 function Subtitle({ text, position }: SubtitleProps) {
   return (
-    <Billboard
-      position={position}
-      follow={true}
-      lockX={false}
-      lockY={false}
-      lockZ={false}
-    >
-      <Text
-        fontSize={0.3}
-        color="#666666"
-        anchorX="left"
-        anchorY="bottom"
-        maxWidth={8}
-      >
-        {text}
-      </Text>
-    </Billboard>
+    <group position={position}>
+      <Html center>
+        <div
+          style={{
+            fontSize: "14px",
+            color: "#666666",
+            whiteSpace: "nowrap",
+          }}
+        >
+          {text}
+        </div>
+      </Html>
+    </group>
   );
 }
 
