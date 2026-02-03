@@ -9,8 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@aws-sdk/client-ses": "^3.758.0",
-    "@aws-sdk/client-sts": "^3.758.0",
+    "@aws-sdk/client-ses": "^3.981.0",
+    "@aws-sdk/client-sts": "^3.981.0",
     "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
     "@fortawesome/free-regular-svg-icons": "^6.7.2",
