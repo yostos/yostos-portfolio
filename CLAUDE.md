@@ -2,6 +2,17 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Project Information
+
+- **Project Name**: yostos-portfolio
+- **Repository**: yostos/yostos-portfolio
+
+## Git Workflow
+
+- **Direct commits to the `main` branch are prohibited**
+- Always create a feature branch for changes (e.g., `fix/issue-name`, `feature/new-feature`)
+- Submit changes via Pull Request
+
 ## Development Commands
 
 - `npm run dev` - Start development server with Turbopack
@@ -12,11 +23,11 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Architecture
 
-This is a Next.js 15 portfolio website built with the App Router architecture. The project follows a component-based structure with TypeScript and Tailwind CSS.
+This is a Next.js 16 portfolio website built with the App Router architecture. The project follows a component-based structure with TypeScript and Tailwind CSS.
 
 ### Key Technologies
 
-- **Next.js 15** with App Router for routing and SSR
+- **Next.js 16** with App Router for routing and SSR
 - **React 19** for UI components
 - **TypeScript** for type safety
 - **Tailwind CSS** with daisyUI for styling
