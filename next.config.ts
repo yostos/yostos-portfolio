@@ -4,6 +4,7 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: __dirname,
   },
+  transpilePackages: ["@react-three/drei", "three"],
   async headers() {
     return [
       {
