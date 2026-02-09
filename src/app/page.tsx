@@ -1,5 +1,6 @@
 "use client";
 
+import dynamic from "next/dynamic";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -7,7 +8,8 @@ import {
   faPenRuler,
   faCode,
 } from "@fortawesome/free-solid-svg-icons";
-import Cube3D from "@/components/Cube3D";
+
+const Cube3D = dynamic(() => import("@/components/Cube3D"), { ssr: false });
 import WorkGrid from "@/components/WorkGrid";
 import NewsComponent from "@/components/NewsComponent";
 
